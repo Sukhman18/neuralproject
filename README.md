@@ -1,38 +1,34 @@
-# COVID-19 Detection with Convolutional Neural Networks
+# covid detection with CNNs
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://tensorflow.org)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg)](https://jupyter.org)
 
-Deep learning model that classifies chest X-ray images to detect COVID-19 using a custom CNN architecture.
+trained a convolutional neural network to spot COVID-19 in chest X-rays. three classes: covid positive, viral pneumonia, and normal lungs.
 
-## Overview
+## what's in here
 
-Trained on the [COVID-19 Radiography Database](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database) from Kaggle, this model distinguishes between COVID-19 positive, viral pneumonia, and normal lung X-rays.
+used the [COVID-19 Radiography Database](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database) from Kaggle. built the model from scratch:
 
-## Model Architecture
+- a few convolutional layers with ReLU
+- max pooling to shrink things down
+- dropout so it doesn't memorize
+- fully connected layers at the end
+- SGD for optimization
 
-- Multiple convolutional layers with ReLU activation
-- Max pooling for dimensionality reduction
-- Dropout for regularization
-- Fully connected layers for classification
-- Optimized with stochastic gradient descent
+the goal was to see how far you can get with a straightforward CNN on medical images. turns out, pretty far.
 
-## Results
-
-The model achieves reliable multi-class classification across the three categories, demonstrating the potential of deep learning in medical imaging diagnostics.
-
-## Setup
+## run it
 
 ```bash
 pip install tensorflow numpy pandas matplotlib opencv-python jupyter
 jupyter notebook COVID.ipynb
 ```
 
-## Dataset
+## data
 
-Download from Kaggle: [COVID-19 Radiography Database](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database)
+grab the dataset here: [Kaggle link](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database)
 
 ---
 
-*Built as part of exploring applied deep learning in healthcare diagnostics.*
+*built while learning how deep learning applies to healthcare — not a production model, but a solid learning project*
